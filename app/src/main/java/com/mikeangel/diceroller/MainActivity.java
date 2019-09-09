@@ -1,6 +1,7 @@
 package com.mikeangel.diceroller;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public int numberOfDice = 1;
     public ArrayList<Integer> dice = new ArrayList<Integer>(numberOfDice);
     public int maxNumberOfDice = 9;
+    public int colorScheme = 0;
     public int[] DiceIds = {
             R.id.die_1,
             R.id.die_2,
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_die_6_alt,
             R.drawable.ic_invis,
     };
+
     // TODO: Hold button that highlights and makes die not roll (if not on hold)
     // TODO: Settings page with: colors
 
@@ -61,11 +64,64 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** Called when the user taps the Color button */
+    public void changeColor(View view) {
+        colorScheme += 1;
+        colorScheme %= 3;
+        ConstraintLayout cl = findViewById(R.id.main);
+        if (colorScheme == 0){
+            diceImages[0] = R.drawable.ic_die_1;
+            diceImages[1] = R.drawable.ic_die_2;
+            diceImages[2] = R.drawable.ic_die_3;
+            diceImages[3] = R.drawable.ic_die_4;
+            diceImages[4] = R.drawable.ic_die_5;
+            diceImages[5] = R.drawable.ic_die_6;
+            diceImagesAlt[0] = R.drawable.ic_die_1;
+            diceImagesAlt[1] = R.drawable.ic_die_2_alt;
+            diceImagesAlt[2] = R.drawable.ic_die_3_alt;
+            diceImagesAlt[3] = R.drawable.ic_die_4;
+            diceImagesAlt[4] = R.drawable.ic_die_5;
+            diceImagesAlt[5] = R.drawable.ic_die_6_alt;
+            cl.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+        }
+        if (colorScheme == 1){
+            diceImages[0] = R.drawable.ic_blue_die_1;
+            diceImages[1] = R.drawable.ic_blue_die_2;
+            diceImages[2] = R.drawable.ic_blue_die_3;
+            diceImages[3] = R.drawable.ic_blue_die_4;
+            diceImages[4] = R.drawable.ic_blue_die_5;
+            diceImages[5] = R.drawable.ic_blue_die_6;
+            diceImagesAlt[0] = R.drawable.ic_blue_die_1;
+            diceImagesAlt[1] = R.drawable.ic_blue_die_2_alt;
+            diceImagesAlt[2] = R.drawable.ic_blue_die_3_alt;
+            diceImagesAlt[3] = R.drawable.ic_blue_die_4;
+            diceImagesAlt[4] = R.drawable.ic_blue_die_5;
+            diceImagesAlt[5] = R.drawable.ic_blue_die_6_alt;
+            cl.setBackgroundColor(getResources().getColor(R.color.colorPink));
+        }
+        if (colorScheme == 2){
+            diceImages[0] = R.drawable.ic_red_die_1;
+            diceImages[1] = R.drawable.ic_red_die_2;
+            diceImages[2] = R.drawable.ic_red_die_3;
+            diceImages[3] = R.drawable.ic_red_die_4;
+            diceImages[4] = R.drawable.ic_red_die_5;
+            diceImages[5] = R.drawable.ic_red_die_6;
+            diceImagesAlt[0] = R.drawable.ic_red_die_1;
+            diceImagesAlt[1] = R.drawable.ic_red_die_2_alt;
+            diceImagesAlt[2] = R.drawable.ic_red_die_3_alt;
+            diceImagesAlt[3] = R.drawable.ic_red_die_4;
+            diceImagesAlt[4] = R.drawable.ic_red_die_5;
+            diceImagesAlt[5] = R.drawable.ic_red_die_6_alt;
+            cl.setBackgroundColor(getResources().getColor(R.color.colorTableGreen));
+        }
+        refreshDice(numberOfDice, dice);
+    }
+
     /** Called when the user taps the addDice button */
     public void addDice(View view){
         if(numberOfDice < maxNumberOfDice) {
             numberOfDice += 1;
-            rollDice(view);
+            refreshDice(numberOfDice, dice);
         }
     }
 
@@ -73,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     public void subtractDice(View view){
         if(numberOfDice > 1) {
             numberOfDice -= 1;
-            rollDice(view);
+            refreshDice(numberOfDice, dice);
         }
     }
 

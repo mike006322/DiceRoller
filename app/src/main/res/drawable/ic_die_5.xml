@@ -14,7 +14,7 @@
         android:strokeLineCap="square"/>
     <path
         android:pathData="m17.722,29.045l0,0c0,-7.477 6.061,-13.538 13.538,-13.538l54.152,0l0,0c3.591,0 7.034,1.426 9.573,3.965c2.539,2.539 3.965,5.982 3.965,9.573l0,54.152c0,7.477 -6.061,13.538 -13.538,13.538l-54.152,0c-7.477,0 -13.538,-6.061 -13.538,-13.538z"
-        android:fillColor="#ffffff"
+        android:fillColor="@color/colorFill"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -24,11 +24,11 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorOuter"
         android:strokeLineCap="butt"/>
     <path
         android:pathData="m31.013,76.798l0,0c0,-3.67 2.975,-6.646 6.646,-6.646l0,0c1.763,0 3.453,0.7 4.699,1.946c1.246,1.246 1.946,2.937 1.946,4.699l0,0c0,3.67 -2.975,6.646 -6.646,6.646l0,0c-3.67,0 -6.646,-2.975 -6.646,-6.646z"
-        android:fillColor="#000000"
+        android:fillColor="@color/colorDots"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -38,11 +38,11 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorDotsOutline"
         android:strokeLineCap="butt"/>
     <path
         android:pathData="m72.367,35.444l0,0c0,-3.67 2.975,-6.646 6.646,-6.646l0,0c1.763,0 3.453,0.7 4.699,1.946c1.246,1.246 1.946,2.937 1.946,4.699l0,0c0,3.67 -2.975,6.646 -6.646,6.646l0,0c-3.67,0 -6.646,-2.975 -6.646,-6.646z"
-        android:fillColor="#000000"
+        android:fillColor="@color/colorDots"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -52,11 +52,11 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorDotsOutline"
         android:strokeLineCap="butt"/>
     <path
         android:pathData="m31.013,35.444l0,0c0,-3.67 2.975,-6.646 6.646,-6.646l0,0c1.763,0 3.453,0.7 4.699,1.946c1.246,1.246 1.946,2.937 1.946,4.699l0,0c0,3.67 -2.975,6.646 -6.646,6.646l0,0c-3.67,0 -6.646,-2.975 -6.646,-6.646z"
-        android:fillColor="#000000"
+        android:fillColor="@color/colorDots"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -66,11 +66,11 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorDotsOutline"
         android:strokeLineCap="butt"/>
     <path
         android:pathData="m72.367,76.798l0,0c0,-3.67 2.975,-6.646 6.646,-6.646l0,0c1.763,0 3.453,0.7 4.699,1.946c1.246,1.246 1.946,2.937 1.946,4.699l0,0c0,3.67 -2.975,6.646 -6.646,6.646l0,0c-3.67,0 -6.646,-2.975 -6.646,-6.646z"
-        android:fillColor="#000000"
+        android:fillColor="@color/colorDots"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -80,11 +80,11 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorDotsOutline"
         android:strokeLineCap="butt"/>
     <path
         android:pathData="m51.451,56.092l0,0c0,-3.67 2.975,-6.646 6.646,-6.646l0,0c1.763,0 3.453,0.7 4.699,1.946c1.246,1.246 1.946,2.937 1.946,4.699l0,0c0,3.67 -2.975,6.646 -6.646,6.646l0,0c-3.67,0 -6.646,-2.975 -6.646,-6.646z"
-        android:fillColor="#000000"
+        android:fillColor="@color/colorDots"
         android:fillType="evenOdd"
         android:strokeColor="#00000000"
         android:strokeLineCap="square"/>
@@ -94,7 +94,7 @@
         android:strokeWidth="1.0"
         android:fillColor="#00000000"
         android:fillType="evenOdd"
-        android:strokeColor="#000000"
+        android:strokeColor="@color/colorDotsOutline"
         android:strokeLineCap="butt"/>
   </group>
 </vector>

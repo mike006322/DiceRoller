@@ -3,4 +3,5 @@
     <string name="total">Total: </string>
     <string name="addDice">Würfel +</string>
     <string name="subtractDice">Würfel -</string>
+    <string name="color">Farbe</string>
 </resources>

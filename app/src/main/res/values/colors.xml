@@ -3,4 +3,23 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPink">#ffc9fd</color>
+    <color name="colorTableGreen">#148510</color>
+
+    <!--Black And White-->
+    <color name="colorDots">#000000</color>
+    <color name="colorDotsOutline">#000000</color>
+    <color name="colorOuter">#000000</color>
+    <color name="colorFill">#FFFFFF</color>
+    <!--Red Dice-->
+    <color name="colorBrightRed">#FF1717</color>
+    <color name="colorDarkRed">#730000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <!--Blue Dice-->
+    <color name="colorTeal">#AEFFFF</color>
+    <color name="colorDarkBlue">#008577</color>
+    <color name="colorDarkTeal">#25BBF3</color>
+
+
 </resources>
