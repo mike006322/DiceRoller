@@ -51,7 +51,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="subtractDice"
-        android:text="@string/subtractDice"
+        android:text="-"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addDice"
-        android:text="@string/addDice"
+        android:text="+"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -140,10 +142,10 @@
 
     <Button
         android:id="@+id/changeColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="78dp"
+        android:layout_height="69dp"
+        android:background="@drawable/ic_pallet"
         android:onClick="changeColor"
-        android:text="@string/color"
         app:layout_constraintEnd_toStartOf="@+id/addDice"
         app:layout_constraintStart_toEndOf="@+id/subtractDice"
         app:layout_constraintTop_toTopOf="parent" />

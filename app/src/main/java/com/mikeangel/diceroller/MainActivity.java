@@ -3,11 +3,11 @@ package com.mikeangel.diceroller;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Color button */
     public void changeColor(View view) {
+        Button addDice = findViewById(R.id.addDice);
+        Button subtractDice = findViewById(R.id.subtractDice);
         colorScheme += 1;
         colorScheme %= 3;
         ConstraintLayout cl = findViewById(R.id.main);
@@ -83,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
             diceImagesAlt[4] = R.drawable.ic_die_5;
             diceImagesAlt[5] = R.drawable.ic_die_6_alt;
             cl.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+            addDice.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+            subtractDice.setBackgroundColor(getResources().getColor(R.color.colorWhite));
         }
         if (colorScheme == 1){
             diceImages[0] = R.drawable.ic_blue_die_1;
@@ -98,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
             diceImagesAlt[4] = R.drawable.ic_blue_die_5;
             diceImagesAlt[5] = R.drawable.ic_blue_die_6_alt;
             cl.setBackgroundColor(getResources().getColor(R.color.colorPink));
+            addDice.setBackgroundColor(getResources().getColor(R.color.colorPink));
+            subtractDice.setBackgroundColor(getResources().getColor(R.color.colorPink));
         }
         if (colorScheme == 2){
             diceImages[0] = R.drawable.ic_red_die_1;
@@ -113,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
             diceImagesAlt[4] = R.drawable.ic_red_die_5;
             diceImagesAlt[5] = R.drawable.ic_red_die_6_alt;
             cl.setBackgroundColor(getResources().getColor(R.color.colorTableGreen));
+            //colorButton.setBackgroundColor(getResources().getColor(R.color.colorTableGreen));
+            addDice.setBackgroundColor(getResources().getColor(R.color.colorTableGreen));
+            subtractDice.setBackgroundColor(getResources().getColor(R.color.colorTableGreen));
         }
         refreshDice(numberOfDice, dice);
     }
@@ -122,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         if(numberOfDice < maxNumberOfDice) {
             numberOfDice += 1;
             refreshDice(numberOfDice, dice);
+            changeTotal(numberOfDice, dice);
         }
     }
 
@@ -130,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         if(numberOfDice > 1) {
             numberOfDice -= 1;
             refreshDice(numberOfDice, dice);
+            changeTotal(numberOfDice, dice);
         }
     }
 
@@ -180,8 +191,6 @@ public class MainActivity extends AppCompatActivity {
                 dieToEdit.setImageResource(diceImages[diceValue-1]);
             }
             dieToEdit.startAnimation(shake);
-//            Drawable highlight = getResources().getDrawable( R.drawable.highlight);
-//            dieToEdit.setBackground(highlight);
         }
         if(numberOfDice < maxNumberOfDice){
             for(int i = numberOfDice; i < maxNumberOfDice; i++){
