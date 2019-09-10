@@ -50,20 +50,28 @@
         android:id="@+id/subtractDice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:onClick="subtractDice"
         android:text="-"
-        android:textSize="18sp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/changeColor"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
 
     <Button
         android:id="@+id/addDice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:onClick="addDice"
         android:text="+"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/changeColor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -142,10 +150,11 @@
 
     <Button
         android:id="@+id/changeColor"
-        android:layout_width="78dp"
-        android:layout_height="69dp"
+        android:layout_width="93dp"
+        android:layout_height="82dp"
         android:background="@drawable/ic_pallet"
         android:onClick="changeColor"
+
         app:layout_constraintEnd_toStartOf="@+id/addDice"
         app:layout_constraintStart_toEndOf="@+id/subtractDice"
         app:layout_constraintTop_toTopOf="parent" />
